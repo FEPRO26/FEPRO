@@ -247,9 +247,8 @@
   .action-bar {
     flex-shrink: 0;
     padding: 10px 14px;
-    padding-bottom: max(12px, env(safe-area-inset-bottom));
     background: var(--surface);
-    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     display: flex;
     gap: 8px;
     align-items: center;
@@ -357,6 +356,15 @@
     <button class="type-btn" data-type="official" onclick="setType('official')">📃 Comunicat oficial</button>
   </div>
 
+  <div class="action-bar">
+    <button class="clear-btn" onclick="clearAll()" title="Șterge tot">🗑️</button>
+    <button class="copy-btn" id="copyBtn" onclick="copyOutput()">📋 Copiază</button>
+    <button class="translate-btn" id="translateBtn" onclick="runTranslation()">
+      <div class="spinner"></div>
+      <span class="btn-text">Traduce →</span>
+    </button>
+  </div>
+
   <div class="panels">
 
     <div class="panel">
@@ -389,15 +397,6 @@
       </div>
     </div>
 
-  </div>
-
-  <div class="action-bar">
-    <button class="clear-btn" onclick="clearAll()" title="Șterge tot">🗑️</button>
-    <button class="copy-btn" id="copyBtn" onclick="copyOutput()">📋 Copiază</button>
-    <button class="translate-btn" id="translateBtn" onclick="runTranslation()">
-      <div class="spinner"></div>
-      <span class="btn-text">Traduce →</span>
-    </button>
   </div>
 
 </div>
